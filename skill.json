@@ -1,0 +1,39 @@
+{
+  "name": "genpark-telephony-silence-latency-vad-calibrator-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Telephony voice activity detection (VAD) silence duration calibrator and endpointing latency optimizer.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "voice-agent",
+  "tags": [
+    "vad",
+    "endpointing",
+    "voice-latency",
+    "elevenlabs",
+    "deepgram"
+  ],
+  "inputs": {
+    "background_noise_db": {
+      "type": "number"
+    },
+    "speaker_cadence_wpm": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "calibration_id": {
+      "type": "string"
+    },
+    "optimal_silence_threshold_ms": {
+      "type": "integer"
+    },
+    "end_of_speech_latency_ms": {
+      "type": "integer"
+    },
+    "calibration_profile_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
